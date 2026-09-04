@@ -887,19 +887,19 @@ function speakLocal(txt){
 }
 function togglePlay(){
   playing=!playing;setPlayUI(playing);
-  if(!playing){stopAudio();return}
+  if(!playing){stopAudio();toast("已停止");return}
   const r=RELICS[cur];
   const txt=lang==="en"?r.en[mode]:lang==="cy"?r.cy:r.zh[mode];
   /* 后端神经语音优先（自然音色）；后端未启动时才退回浏览器合成 */
-  /* 预生成音频优先（本地文件，离线可用）：文物id × 语言 */
-  const local=new Audio("assets/audio/"+r.id+"_"+lang+".mp3");
+  /* 预生成音频优先（本地文件，离线可用）：cy 不分档；zh/en 用通用版音频 */
+  const fname = lang==="cy" ? r.id+"_cy.mp3" : r.id+"_"+lang+".mp3";
+  toast(lang==="cy"?"四川话语音 · 方言播报中":t("playing"));
+  const local=new Audio("assets/audio/"+fname);
   local.onloadedmetadata=()=>{
     if(!playing){local.pause();return}
     audioEl=local;
     audioEl.onended=()=>{playing=false;setPlayUI(false)};
     audioEl.play().catch(()=>speakLocal(txt));
-    if(lang==="cy")toast("四川话语音 · 方言播报中");
-    else toast(t("playing"));
   };
   local.onerror=()=>{ if(!playing)return; fetchTTS(txt); };
   local.load();
