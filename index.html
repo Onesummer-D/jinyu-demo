@@ -681,6 +681,11 @@ function closeLightbox(){$("lightbox").classList.remove("on")}
 
 /* ── 演示 / 真实模式 ── */
 async function toggleLive(){
+  /* 线上静态版无后端可连：给出友好说明而非报错 */
+  if(!/^(localhost|127\.0\.0\.1)$/.test(location.hostname)){
+    toast("线上版为演示模式 · AI 识别与追问请使用完整版系统");
+    return;
+  }
   if(!live){
     try{
       const r=await fetch("http://localhost:8000/api/health");const j=await r.json();
