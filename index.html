@@ -1145,7 +1145,7 @@ function clearFoot(){
 
 /* ── 初始化 ── */
 (function(){
-  if(location.search.indexOf("cinema")>=0)document.body.classList.add("cinema");
+  if(location.search.indexOf("cinema")>=0||window.innerWidth<520)document.body.classList.add("cinema");
   const eq=$("eq");for(let i=0;i<26;i++)eq.appendChild(document.createElement("i"));
   try{
     const p=JSON.parse(localStorage.getItem("jy_prefs")||"{}");
