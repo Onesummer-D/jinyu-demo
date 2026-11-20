@@ -3,11 +3,14 @@
 面向成都博物馆「钢铁与荣耀——意大利都灵皇宫博物馆藏骑士文物展」的智慧文博导览原型。
 本项目为暑期个人实践「赴四川省成都市成都博物馆开展智慧文博调研与 AI 文化导览设计」的技术成果：
 
-- 线上体验（GitHub Pages 静态托管）：**https://onesummer-d.github.io/jinyu-demo/**
+- 线上完整版（前端 + AI 后端，公网部署）：**http://81.70.40.146/**
+- 线上演示版（GitHub Pages 静态托管）：**https://onesummer-d.github.io/jinyu-demo/**
 - 代码仓库：https://github.com/Onesummer-D/jinyu-demo
 
-> 线上地址为纯静态部署，打开后自动进入「演示模式」（内置调研种子数据，完整展示全部界面与流程）；
-> AI 问答、拍照识别等实时接口需按下方说明部署后端后使用。
+> GitHub Pages 地址为纯静态部署，打开后自动进入「演示模式」（内置调研种子数据，完整展示全部界面与流程）；
+> 公网完整版由腾讯云服务器（nginx + FastAPI + GLM）提供全部 AI 能力。
+> 注意：公网完整版为 HTTP 访问，浏览器相机能力（getUserMedia）要求 HTTPS 安全上下文，
+> 「拍照识文物」请使用「从相册选择照片」入口；二维码扫码不受影响。
 
 ## 功能一览
 
@@ -77,7 +80,9 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 ## 公网部署说明
 
 - **前端**：推送到本仓库 `gh-pages` 分支即由 GitHub Pages 托管，公网地址见上方。
-- **后端**：GitHub Pages 无法运行 Python 服务。如需公网体验完整 AI 功能，请将 `backend/` 部署至公网服务器（并配置 HTTPS），然后将 `index.html` 中的 `API()` 基地址指向该服务。
+- **后端**：GitHub Pages 无法运行 Python 服务。当前公网完整版部署在腾讯云服务器（Ubuntu + nginx 反代 + uvicorn，systemd 常驻），
+  前端静态文件位于 `/var/www/jinyu`，后端服务位于 `/opt/jinyu/backend`（监听 127.0.0.1:8001），
+  nginx 将 `/api/` 反向代理至后端。如需重新部署，同步代码后重启 uvicorn 服务即可。
 
 ## 实践信息
 
