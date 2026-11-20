@@ -1,0 +1,60 @@
+{
+ "1": {
+  "t": "荣耀之路展厅 · 头盔与板甲",
+  "tEn": "Hall of Glory · Helmets & Plate",
+  "ids": [
+   "parade-helmet",
+   "plate-armour"
+  ]
+ },
+ "2": {
+  "t": "兵器墙",
+  "tEn": "Weapon Wall",
+  "ids": [
+   "sword"
+  ]
+ },
+ "3": {
+  "t": "展厅中庭 · 马面甲",
+  "tEn": "Central Hall · Shaffron",
+  "ids": [
+   "shaffron"
+  ]
+ },
+ "4": {
+  "t": "展厅中庭 · 战马具装",
+  "tEn": "Central Hall · Barded Warhorse",
+  "ids": [
+   "barded-horse"
+  ]
+ },
+ "5": {
+  "t": "沉浸投影走廊",
+  "tEn": "Immersive Projection Corridor",
+  "note": "场景点位 · 弧面投影《骑士的战斗》，与中庭战马具装同构成景",
+  "noteEn": "Scenic point · curved projection, paired with the warhorse tableau",
+  "ids": [
+   "barded-horse"
+  ]
+ },
+ "6": {
+  "t": "序厅 · AR 导览",
+  "tEn": "Foyer · AR Guiding",
+  "note": "Rokid AR 眼镜租借与使用指南",
+  "noteEn": "Rokid AR glasses rental & user guide",
+  "photos": [
+   "assets/ar-poster.jpg",
+   "assets/rokid-guide.jpg"
+  ],
+  "ids": []
+ },
+ "7": {
+  "t": "文创区",
+  "tEn": "Shop & Exit",
+  "note": "纪念章售贩 · 锦语数字纪念章在此领取",
+  "noteEn": "Commemorative medals · claim your digital seal here",
+  "photo": "assets/shop.jpg",
+  "ids": [],
+  "foot": true
+ }
+}

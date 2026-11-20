@@ -1,0 +1,208 @@
+[
+ {
+  "id": "parade-helmet",
+  "mono": "盔",
+  "idx": "壹",
+  "name": "仪仗头盔",
+  "enName": "Parade Helmet",
+  "era": "1575–1585",
+  "origin": "意大利北部 · 下亚岑地区",
+  "originEn": "Northern Italy · lower Aemilia",
+  "loc": "荣耀之路展厅 · AR 点位一",
+  "locEn": "Hall of Glory · AR Point 1",
+  "point": 1,
+  "photo": "assets/parade-helmet.jpg",
+  "hero": "都灵皇宫博物馆 Armeria Reale 藏",
+  "heroEn": "Royal Armoury (Armeria Reale), Palace of Turin",
+  "zh": {
+   "child": "这件头盔呀，是四百多年前意大利骑士参加阅兵仪式时戴的！你看它上面刻满了漂亮的花纹，金光闪闪——就像骑士的“节日礼服”。不过它太重太华丽啦，打仗的时候骑士会换上更轻便的头盔，这种漂亮的专门用来“凹造型”，让大家都看：哇，好威风！小朋友找找看，头盔最顶上是不是有个插羽毛的小孔呀？",
+   "general": "这是一件 16 世纪后半叶的仪仗头盔，产自意大利北部的盔甲制造中心。与实战盔甲不同，仪仗盔甲追求视觉威仪：表面布满精细的錾刻与镀金纹饰，在阅兵和宫廷仪式上折射光线、彰显佩戴者的地位与财富。值得注意的是，这类头盔的防护性能往往被刻意弱化——装饰性取代了功能性，它本质上是一件“穿在身上的权力宣言”。本次展览中，它与波旁王朝“嘉奖”脉络下的藏品一同呈现。",
+   "pro": "仪仗头盔（Parade Helmet），1575–1585，下亚岑（Azzo/Bassa Aemilia）地区工坊出品，现藏都灵皇宫博物馆皇家军械库（Armeria Reale）。器形属经典 ceremonial 型制，面甲部分保留呼吸孔阵列但开孔率显著低于实战款；表面工艺为錾刻（chasing）与蚀刻（etching）结合，局部镀金，纹样母题为卷叶与战利品装饰（trophy motifs），符合十六世纪后半叶米兰-布雷西亚体系“重装饰、轻实战”的仪仗传统。Armeria Reale 的同类收藏多经萨伏依王朝整备，本件与“波旁王朝的嘉奖”专题直接相关。"
+  },
+  "en": {
+   "child": "Hey kids! This shiny helmet is over four hundred years old — but knights wore it for parades, not for battles. Look at all the swirls and golden patterns: it's like a knight's party outfit! It was too heavy and too fancy for fighting, so knights kept it just for showing off. Can you find the little hole on the very top? That's where colourful feathers were plugged in!",
+   "general": "A ceremonial parade helmet from northern Italy, c. 1575–1585. Unlike battlefield armour, parade pieces were engineered for spectacle: chased and gilt ornamentation caught the light during court processions, proclaiming the wearer's rank. Note the reduced breathing perforations — protection was deliberately traded for splendour. Collection of the Armeria Reale, Turin.",
+   "pro": "Parade helmet, 1575–1585, workshop of the lower Aemilia region, Royal Armoury of Turin (Armeria Reale). Classic ceremonial type; the visor retains a breathing-piercing array at markedly reduced perforation density compared with munitions pieces. The surface is worked in chasing combined with etching and partial gilding; the ornamental vocabulary of scrolling foliage and trophy motifs conforms to the late-sixteenth-century Milan–Brescia 'decoration over practicality' parade tradition. Related Armeria Reale holdings were largely assembled under the House of Savoy, and the piece belongs to the exhibition's 'Bourbon reward' strand."
+  },
+  "cy": "这个盔盔儿嘛，是四百多年前意大利骑士走队列的时候戴的！你看上头刻得来花里胡哨的，金光闪闪——硬是要得！不过莫看它好看，打仗可莫戴它哦，重得很还挡不住刀刀。这种盔盔儿就是骑士的“赶酒碗儿行头”，走一趟队列，就是要让大伙儿看到：这个骑士，安逸得很！",
+  "qa": [
+   [
+    "头盔上的花纹是怎么刻上去的？",
+    "工匠先在钢面涂防酸层，用针刻出纹样，再以酸液腐蚀出凹槽，最后錾刻修整并局部镀金——这就是“蚀刻+錾刻”复合工艺，一件头盔往往需要数周。"
+   ],
+   [
+    "为什么打仗不戴它？",
+    "仪仗盔甲平均比实战款重且开孔率低，视野与呼吸都受限；其价值在于仪式场合的视觉冲击，而非防护。史载骑士实战多采用简洁的“实战款”装备。"
+   ],
+   [
+    "上面的小孔是干嘛的？",
+    "那是呼吸孔阵列，兼顾通风与格挡；顶部小孔则是羽饰插座，阅兵时插上彩色羽毛，远远看去如同一面旗帜。"
+   ]
+  ]
+ },
+ {
+  "id": "shaffron",
+  "mono": "马",
+  "idx": "贰",
+  "name": "马面甲",
+  "enName": "Shaffron",
+  "era": "1570–1580",
+  "origin": "意大利米兰 · Giovanni Battista Rota 工坊",
+  "originEn": "Milan · workshop of Giovanni Battista Rota",
+  "loc": "展厅中庭 · AR 点位三",
+  "locEn": "Central Hall · AR Point 3",
+  "point": 3,
+  "photo": "assets/shaffron.jpg",
+  "hero": "镀金蚀刻钢 · 都灵皇宫博物馆藏",
+  "heroEn": "Gilt-etched steel · Royal Armoury, Turin",
+  "zh": {
+   "child": "这一片像面具一样的东西，可不是给骑士戴的——它是给大马戴的“马口罩”！四百多年前的骑士宝贝他们的战马，就像你现在宝贝你的小自行车一样，所以给马的脸脸也做了一副盔甲。上面还镀了金、刻了花，马儿戴上它，简直就像童话里跑出来的“金色神马”！",
+   "general": "这是一件文艺复兴时期的马面甲（Shaffron），用于保护战马的面部，出自米兰工匠 Giovanni Battista Rota 之手，表面为镀金蚀刻钢工艺。十六世纪米兰是全欧洲的盔甲制造中心，其产品行销各国宫廷。马具装的价格往往不亚于骑士本人的盔甲——战马是骑兵最贵重的“装备”，为它披挂华丽甲具，既是防护，更是主人财力的移动广告。",
+   "pro": "马面甲（Shaffron），镀金蚀刻钢，1570–1580，米兰 Giovanni Battista Rota 工坊。形制覆盖马额至鼻梁，耳护与目孔开合设计规整；主纹样为交错莨苕卷叶，蚀刻线内残留镀金痕迹，符合 Rota 工坊有签记存世的同类器特征。十六世纪米兰出口马具装常与骑士甲成套定制，全套 cavalcade 装备的价格可抵一个工匠数年收入。本件与展厅中庭战马标本、马铠同构成景，对应策展的“人马一体”叙事线。"
+  },
+  "en": {
+   "child": "This mask isn't for a knight — it's for a horse! Four hundred years ago, knights loved their horses the way you love your bike, so the horse got armour too. It's covered in gold and beautiful patterns — like a golden unicorn from a fairy tale! Can you see the two little holes near the top? Those are for the horse's eyes.",
+   "general": "A gilt-etched steel shaffron (horse face armour), Milan, c. 1570–1580, from the workshop of Giovanni Battista Rota. Milan was Europe's armour-making capital, and a warhorse's barding could cost as much as the knight's own harness — protection doubled as a mobile advertisement of wealth.",
+   "pro": "Shaffron (horse face defence), gilt-etched steel, 1570–1580, Milan, workshop of Giovanni Battista Rota. The form covers the frontal bone down to the nasal bone, with well-regulated ear defences and openwork eye openings; the principal design of interlocking acanthus scrollwork retains gilding within the etched lines, consistent with signed pieces from the Rota workshop. Sixteenth-century Milan exported barding often custom-made en suite with the knight's harness; a full cavalcade set could cost a craftsman several years' income. Displayed with the taxidermied warhorse in the central hall, the piece anchors the curatorial 'horse and rider as one' narrative."
+  },
+  "cy": "这个像面壳壳一样的东西，是给大马儿戴的“马口罩”！四百多年前的骑士宝贝战马得很，马儿的脸脸也要穿盔甲。上头还镀了金、刻了花儿，马儿戴起走两步，巴适得板——别个一看就晓得：这匹马的主人，是个有钱人！",
+  "qa": [
+   [
+    "马面甲会影响马的视线吗？",
+    "目孔位置经过马体工学校准，正面视野保留约七成；但确实影响余光，所以具装战马需要长期训练适应，史载幼马一岁起就要开始“披甲驯马”。"
+   ],
+   [
+    "为什么做这么华丽？",
+    "马具装与骑士甲常成套定制，出现在阅兵与仪仗场合——它和仪仗头盔一样，本质是“移动的财富展示”。"
+   ],
+   [
+    "米兰为什么是盔甲中心？",
+    "米兰拥有铁矿、水力锤锻与行会体系三重优势，Missaglia 等家族工坊垄断欧洲高端市场近两百年，Rota 工坊是其晚期代表。"
+   ]
+  ]
+ },
+ {
+  "id": "sword",
+  "mono": "剑",
+  "idx": "叁",
+  "name": "骑士长剑",
+  "enName": "Sword",
+  "era": "16 世纪",
+  "origin": "欧洲 · 蒂米什瓦拉 H. Halmann 藏品",
+  "originEn": "Europe · H. Halmann collection, Timișoara",
+  "loc": "荣耀之路展厅 · AR 点位二",
+  "locEn": "Hall of Glory · AR Point 2",
+  "point": 2,
+  "photo": "assets/sword.jpg",
+  "hero": "十字护手 · 单手剑制式",
+  "heroEn": "Cross-hilt · single-hand form",
+  "zh": {
+   "child": "这把剑是四百多年前骑士的“贴身宝贝”。你看剑柄横着一道杠，像不像一个“十”字？那叫十字护手，专门保护骑士的手不被敌人砍到。剑身上还有细细的纹路，那是铁匠爷爷一层一层打出来、磨出来的。不过骑士可不能随便拔剑哦——在那个年代，剑就是他们的“身份证”，走到哪儿都要带着。",
+   "general": "这是一把 16 世纪的骑士单手长剑，采用经典的十字护手形制。剑柄雕花保存完好，暗示其贵族属性——普通雇佣兵的制式剑不会有此等装饰。剑身经叠打锻造，截面呈菱形，兼顾劈砍与刺击。值得注意的是剑在这一时期的双重身份：它既是实战武器，更是骑士身份的法定象征——授剑仪式至今仍是欧洲贵族传统的一部分。",
+   "pro": "单手长剑，16 世纪，欧洲大陆制式。菱形截面剑身（diamond-section blade）表明偏刺击用途，与同期 civilian duelling 剑型的技术演进一致；十字护手（cross-guard）末端微下弯，剑首（pommel）配重平衡点约在护手前 8 厘米，持握手感指向单手马术用途。柄部残存雕花与镀层说明等级高于 munitions 级量产剑。藏品经蒂米什瓦拉 H. Halmann 馆著录流转。"
+  },
+  "en": {
+   "child": "This sword was a knight's best friend, four hundred years ago. See the bar across the handle, like a 'plus' sign? That's the cross-guard — it protects the knight's hand from being struck. The fine lines on the blade were hammered out layer by layer by the blacksmith. But knights couldn't just draw it whenever they liked: back then, a sword was like an ID card you carried everywhere you went.",
+   "general": "A 16th-century single-handed knightly sword of classic cross-hilt form. The finely carved hilt marks it as a nobleman's piece rather than a mercenary's issue weapon; its diamond-section blade balances cut and thrust. In this era the sword was also a legal badge of knighthood — the accolade of the sword survives in European tradition to this day.",
+   "pro": "Single-handed sword, 16th century, Continental form. The diamond-section blade indicates a thrust-oriented use consistent with the technical evolution of contemporary civilian duelling swords; the slightly down-curved terminals of the cross-guard and a balance point some 8 cm in front of the guard point to mounted, single-handed use. Surviving hilt carving and traces of gilding place it above munitions-grade production. The piece is recorded through the H. Halmann collection, Timișoara."
+  },
+  "cy": "这把长剑儿嘛，是四百多年前骑士的贴身家什。你看剑把把上头横起一道杠杠，那叫十字护手，免得别个一刀砍下来伤到你的手爪爪。剑身上还有细细的纹路，那是铁匠师傅一锤一锤敲出来的。那个年代的骑士，走到哪儿都要把剑带起——剑就是他们的身份牌牌。",
+  "qa": [
+   [
+    "这把剑有多重？",
+    "此类单手剑通常 1.2–1.5 公斤——比影视剧里的“巨剑”轻得多；重心靠近护手，单手可灵活挥刺，这也是它能“随身一辈子”的原因。"
+   ],
+   [
+    "剑上的花纹是装饰吗？",
+    "部分纹路是叠打锻造的自然纹理（类似木纹），既提高韧性也是真品的身份标识；剑柄雕花则纯为装饰与等级标识。"
+   ],
+   [
+    "骑士剑术和电影里一样吗？",
+    "差别很大。真实剑术讲究控制距离与时机，中世纪剑术手册（如菲奥雷图谱）记录的是精密的绞剑与锁技，更接近“剑上的象棋”。"
+   ]
+  ]
+ },
+ {
+  "id": "plate-armour",
+  "mono": "甲",
+  "idx": "肆",
+  "name": "全身板甲",
+  "enName": "Full Plate Armour",
+  "era": "16 世纪",
+  "origin": "意大利 / 德意志工坊",
+  "originEn": "Italian / German workshop",
+  "loc": "荣耀之路展厅 · AR 点位一",
+  "locEn": "Hall of Glory · AR Point 1",
+  "point": 1,
+  "photo": "assets/plate-armour.jpg",
+  "hero": "马克西米利安式凹槽甲",
+  "heroEn": "Maximilian fluted style",
+  "zh": {
+   "child": "哇，这套“铁壳壳衣服”就是骑士的全身盔甲！从头包到脚，一块一块的铁片像鱼鳞一样连起来，这样骑士走路的时候才不会“咔咔”响、动不了。你猜猜它有多重？其实只有二十多斤——和背一书包课本差不多！所以好的骑士穿上它还能翻身上马呢。找找看，甲面上是不是有一道一道的竖条纹？",
+   "general": "这是一套 16 世纪的全身板甲，采用马克西米利安式凹槽条纹工艺。全身约由数十块甲片铆接联动，重量 20–30 公斤，且重量经甲片分布平均压在全身而非局部——这是板甲“穿着能跑”的工程学秘密。表面的放射状凹槽既是装饰，更在几乎不增重的前提下显著提高甲面刚性，是形式与功能的完美结合，也解释了为何该风格风靡 16 世纪欧洲宫廷。",
+   "pro": "全身板甲（harness），16 世纪，形制近马克西米利安式（Maximilian fluted）。凹槽（fluting）沿应力线放射分布，等效于给薄板加肋，可在 2 毫米级甲面下维持抗冲击刚度；甲片间以铆接皮革内衬联动，肩腰受力结构将整体重量分散，实测机动性远高于“沉重铁罐”的流行误解（精品 harness 约 25kg，与现代消防负重相当）。该件与仪仗头盔构成“仪仗-实战”光谱两端，是本次策展的核心教学对照。"
+  },
+  "en": {
+   "child": "Wow — a knight's whole suit of armour, from head to toe! The little steel plates overlap like fish scales, so the knight could still walk and bend. Guess how heavy it is? Only about twenty-some kilos — like a backpack full of school books! A trained knight could run, and jump onto a horse, wearing it. Can you find the stripes running down the armour?",
+   "general": "A 16th-century full harness in the fluted Maximilian style. Several dozen steel plates, riveted to sliding leather bands, distribute some 20–30 kg evenly over the body — the engineering secret behind a knight who could run and mount on horseback. The radiating flutes act as stiffening ribs, adding rigidity at almost no weight cost.",
+   "pro": "Full plate harness, 16th century, of near-Maximilian fluted form. Flutes distributed along lines of stress act as ribs stiffening a plate of some 2 mm, maintaining impact resistance at minimal weight penalty; the plates articulate on riveted leather internals with shoulder-and-waist load structures distributing mass — mobility far beyond the 'clanking tin can' stereotype, a fine harness of c. 25 kg being comparable to modern firefighter load. Together with the parade helmet it forms the two ends of the 'parade-to-field' spectrum at the heart of the exhibition's teaching design."
+  },
+  "cy": "这套“铁壳壳衣裳”就是骑士的全身盔甲！一块一块的铁片片像鱼鳞鳞一样连起的，穿起走起来照样活甩活甩的。莫信电影里头演的骑士笨得像狗熊——人家这套甲就二十多斤，跟背一背篓书差不多，好的骑士穿起还能翻身上马，凶得很！",
+  "qa": [
+   [
+    "穿这么厚怎么活动？",
+    "甲片间用皮革与铆钉“软连接”，各关节处重叠滑动；重量分散于全身，实测穿戴者可奔跑、上马、俯身——贵族骑士从少年起穿甲训练。"
+   ],
+   [
+    "一箭能射穿吗？",
+    "优质板甲正面在 30 米外基本免疫弓箭；但甲缝、面甲孔与侧面弧度薄弱处是弱点，这也是为什么后世转向火器。"
+   ],
+   [
+    "凹槽条纹是装饰吗？",
+    "不止——凹槽相当于“加强筋”，大幅提升抗冲击刚性而几乎不增重；同时也形成了这个时代的标志性审美，以神圣罗马皇帝马克西米利安一世命名。"
+   ]
+  ]
+ },
+ {
+  "id": "barded-horse",
+  "mono": "骑",
+  "idx": "伍",
+  "name": "战马具装",
+  "enName": "Barded Warhorse",
+  "era": "复原陈列",
+  "origin": "展厅中庭 · 与沉浸投影同构",
+  "originEn": "Central hall · with immersive projection",
+  "loc": "展厅中庭 · AR 点位四",
+  "locEn": "Central Hall · AR Point 4",
+  "point": 4,
+  "photo": "assets/barded-horse.jpg",
+  "hero": "人马一体 · 策展核心场景",
+  "heroEn": "Horse and rider as one · curatorial centrepiece",
+  "zh": {
+   "child": "看，中庭这匹大马！它可不是雕塑哦，是一匹真正的战马标本，穿着属于它的“马盔甲”。它身后的森林和城堡是用投影灯打出来的，一闪一闪，就像大马正要冲进故事书里的城堡！四百年前，骑士和马是最好的搭档——骑士披甲，马也披甲，两个一起才叫“重装骑士”！",
+   "general": "展厅中庭的战马具装场景是本次策展的叙事高潮：真实标本战马披挂具装，背景以弧形投影再现森林与城堡意象，将“人马一体”的中世纪重骑兵概念转译为沉浸式体验。这类数字展陈手法正是当前智慧文博的前沿实践——文物是“真”的，语境靠数字技术“复原”，观众获得的不是单件器物，而是一个可感知的历史场景。",
+   "pro": "中庭场景采用战马标本 + 具装 + 弧面投影的三层叙事：器物层（真实具装）、语境层（数字复现的欧陆森林城堡意象）、体验层（环绕声光）。此手法可对照巴黎军事博物馆的 Musée de l'Armée 场景化陈列范式。值得注意的是投影内容刻意回避了具体战役叙事，以环境意象替代，属于“氛围型数字展陈”而非“叙事型”，策展意图在于空间情绪而非史实重现。"
+  },
+  "en": {
+   "child": "Look at this big horse in the middle of the hall! It's not a statue — it's a real warhorse specimen, wearing its very own horse armour. Behind it, the forest and the castle are made with projection lights, twinkling like the pages of a storybook. Four hundred years ago, knight and horse were best teammates: both wore armour — and that's what made a heavy cavalry!",
+   "general": "The centrepiece of the exhibition: a real horse specimen in full barding, set against a curved projection of forest and castle imagery. The artefact is authentic while its context is digitally restored — the visitor receives not a single object but a perceivable historical scene.",
+   "pro": "The central-hall installation composes three narrative layers — object (authentic barding), context (digitally evoked European forest-and-castle imagery) and experience (surrounding sound and light) — around a taxidermied warhorse. The approach parallels the scene-based display paradigm of the Musée de l'Armée in Paris. Notably, the projection deliberately avoids specific battle narrative in favour of environmental imagery: an ambient rather than narrative form of digital scenography, aimed at spatial mood rather than historical reconstruction."
+  },
+  "cy": "看嘛，中庭这匹大马儿！人家不是摆件件儿哦，是正经的战马标本，还穿起它的“马盔甲”。后头那个森林森林、城堡城堡，是投影灯打出来的，一闪一闪的，就像大马儿正要冲进童话书头去。四百年前的骑士跟马儿是最好的搭档，两个一起穿盔甲，才喊得到“重装骑士”！",
+  "qa": [
+   [
+    "投影是怎么和文物配合的？",
+    "策展方采用弧面融合投影，内容为环境意象（森林、城堡），与文物保持“语境服务”关系而非覆盖叙事——这是氛围型数字展陈的典型手法。",
+    "数字展陈"
+   ],
+   [
+    "一匹战马值多少钱？",
+    "以当时物价折算，一匹合格战马可抵普通工匠三到五年收入；披挂全套具装后，价值翻倍以上——所以具装展示历来是军械馆的“镇厅级别”陈列。"
+   ],
+   [
+    "战马也需要训练吗？",
+    "重装战马需接受耐受甲具噪声、队列行进、甚至冲撞训练；中世纪马术手册显示，一匹合格的战马培育周期约四年。"
+   ]
+  ]
+ }
+]

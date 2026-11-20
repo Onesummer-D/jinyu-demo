@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>锦语 · AI 文化导览（交互原型 v0.2）</title>
+<title>锦语 · AI 文化导览 v1.0</title>
 <style>
 :root{
   --paper:#F5F1E8; --paper2:#EFEADD;
@@ -437,7 +437,7 @@ body.cinema .screen{border-radius:0}
           </div></dd>
         </div>
         <div class="mine-row"><dt data-i18n="rowAI">AI 管道</dt><dd id="ai-status"></dd></div>
-        <div class="mine-row"><dt data-i18n="rowVer">版本</dt><dd id="ver-val">锦语 v0.2 · 2026-08-27</dd></div>
+        <div class="mine-row"><dt data-i18n="rowVer">版本</dt><dd id="ver-val">锦语 v1.0 · 2026-11-20</dd></div>
       </dl>
       <button class="btn wide" onclick="clearFoot()" data-i18n="clearBtn">清空今日足迹</button>
       <div style="height:28px"></div>
@@ -455,7 +455,7 @@ body.cinema .screen{border-radius:0}
 
   <!-- 识别 / 扫码遮罩 -->
   <div class="scan" id="scan">
-    <div class="frame"><span class="c c1"></span><span class="c c2"></span><span class="c c3"></span><span class="c c4"></span><span class="mono" id="scan-mono">盔</span></div>
+    <div class="frame"><span class="c c1"></span><span class="c c2"></span><span class="c c3"></span><span class="c c4"></span><span class="mono" id="scan-mono">盔</span><div id="scan-reader" style="display:none;position:absolute;inset:0;overflow:hidden"></div></div>
     <p class="scan-status" id="scan-status">将展品置于取景框内</p>
     <p class="scan-sub" id="scan-sub">光线不足时，可改拍展品的中英说明牌</p>
     <button class="scan-cancel" onclick="closeScan()">取消</button>
@@ -481,6 +481,7 @@ body.cinema .screen{border-radius:0}
 </div>
 </div>
 
+<script src="assets/vendor/html5-qrcode.min.js"></script>
 <script>
 /* ── 种子数据：与 backend/seed/relics.json 同源，演示模式内置 ── */
 const RELICS=[
@@ -574,8 +575,8 @@ const PT_GALLERY={
 
 /* ── 界面语言（我的 → 语言 切换；en 时全界面英文） ── */
 const I18N={
- zh:{homeKicker:"成都博物馆 · 特展智能导览",displayTitle:"钢铁与荣耀",displaySub:"意大利都灵皇宫博物馆藏骑士文物展",metaLine:"2026.04.30 — 08.30 · 一层特展厅",snapBtn:"拍照 · 听文物开口",scanLink:"扫展品二维码",searchLink:"搜索展品",today:"今日看点",figCap:"展厅实拍 · 调研一手影像",viewFull:"2026 · 08 · 21 · 查看大图",viewCite:"馆方知识库 · 查看引用",askBtn:"追问一句",nextBtn:"换一件",mChild:"儿童版",mGeneral:"通用版",mPro:"专业版",chatOn:"关于",chatPh:"问问这件事物……",sendBtn:"发送 →",mapTitle:"展厅地图",mapTipL:"全馆七个识别点位",mapSlide:"左右滑动查看 →",legendSeen:"已看过",legendUnseen:"未看过",secFoot:"足迹",secSeals:"数字纪念章",sealHint:"看满三件解锁「骑士生涯探索者」，五件解锁「钢铁与荣耀见证者」。",reportBtn:"生成观展报告",footNone:"尚未开览",footEmpty:"还没有足迹。回到「识文物」拍下第一件展品。",mineTitle:"我的",rowGuide:"讲解",rowLang:"语言",rowAI:"AI 管道",rowVer:"版本",clearBtn:"清空今日足迹",searchTitle:"检索展品",searchPh:"输入名称 / 年代 / 来源……",noHit:k=>"没有匹配「"+k+"」的展品。",citeTitle:"引用与依据",reportTitle:"观展报告",rFoot:"足迹",rStay:"驻足",rSeal:"纪念",savePoster:"保存海报",closeBtn:"关闭",busyReport:"正在生成观展报告",seal1:"骑士生涯探索者",seal2:"钢铁与荣耀见证者",seal3:"追问五连",verVal:"锦语 v0.2 · 2026-08-27",aiOff:"未连接（演示模式）",aiFail:"连接失败",aiNoKey:"已连接 · 未配置 API Key",scanWait:"将展品置于取景框内",scanQR:"对准展品二维码",scanSubCam:"光线不足时，可改拍展品的中英说明牌",scanSubQR:"原型以模拟扫码演示",scanSubDemo:"演示模式 · 调研种子数据",recog:"正在识别",chatHi:n=>"关于「"+n+"」有什么想问的？",lbTap:"点击任意处关闭"},
- en:{homeKicker:"Chengdu Museum · Smart Guide",displayTitle:"Steel of Glory",displaySub:"Knightly Arms & Armour from the Royal Palace of Turin",metaLine:"2026.04.30 — 08.30 · Special Exhibition, F1",snapBtn:"Snap · Hear the Artefact",scanLink:"Scan QR",searchLink:"Search",today:"Today's Highlights",figCap:"Field photo · first-hand documentation",viewFull:"2026 · 08 · 21 · Full image",viewCite:"Knowledge Base · Citations",askBtn:"Ask a Question",nextBtn:"Next Artefact",mChild:"Kids",mGeneral:"General",mPro:"Expert",chatOn:"On ",chatPh:"Ask about this piece…",sendBtn:"Send →",mapTitle:"Floor Map",mapTipL:"Seven AR points across the hall",mapSlide:"Slide to view →",legendSeen:"Seen",legendUnseen:"Unseen",secFoot:"Footprint",secSeals:"Digital Seals",sealHint:"Three artefacts unlock Knight-Explorer; five unlock Glory-Witness.",reportBtn:"Generate Visit Report",footNone:"No visits yet",footEmpty:"No visits yet. Snap your first artefact in Explore.",mineTitle:"Me",rowGuide:"Narration",rowLang:"Language",rowAI:"AI Pipeline",rowVer:"Version",clearBtn:"Clear Today's Footprint",searchTitle:"Search",searchPh:"Name / era / origin…",noHit:k=>'No match for "'+k+'".',citeTitle:"Citations",reportTitle:"Visit Report",rFoot:"Visits",rStay:"Top Stop",rSeal:"Keepsake",savePoster:"Save Poster",closeBtn:"Close",busyReport:"Generating report",seal1:"Knight-Explorer",seal2:"Glory-Witness",seal3:"Five Questions",verVal:"Jinyu v0.2 · 2026-08-27",aiOff:"Offline (demo mode)",aiFail:"Connection failed",aiNoKey:"Connected · no API key",scanWait:"Place the artefact in the frame",scanQR:"Aim at the QR code",scanSubCam:"In low light, photograph the bilingual label instead",scanSubQR:"Simulated scan in prototype",scanSubDemo:"Demo mode · seed data",recog:"Recognising",chatHi:n=>"What would you like to know about "+n+"?",lbTap:"Tap anywhere to close"}
+ zh:{homeKicker:"成都博物馆 · 特展智能导览",displayTitle:"钢铁与荣耀",displaySub:"意大利都灵皇宫博物馆藏骑士文物展",metaLine:"2026.04.30 — 08.30 · 一层特展厅",snapBtn:"拍照 · 听文物开口",scanLink:"扫展品二维码",searchLink:"搜索展品",today:"今日看点",figCap:"展厅实拍 · 调研一手影像",viewFull:"2026 · 08 · 21 · 查看大图",viewCite:"馆方知识库 · 查看引用",askBtn:"追问一句",nextBtn:"换一件",mChild:"儿童版",mGeneral:"通用版",mPro:"专业版",chatOn:"关于",chatPh:"问问这件事物……",sendBtn:"发送 →",mapTitle:"展厅地图",mapTipL:"全馆七个识别点位",mapSlide:"左右滑动查看 →",legendSeen:"已看过",legendUnseen:"未看过",secFoot:"足迹",secSeals:"数字纪念章",sealHint:"看满三件解锁「骑士生涯探索者」，五件解锁「钢铁与荣耀见证者」。",reportBtn:"生成观展报告",footNone:"尚未开览",footEmpty:"还没有足迹。回到「识文物」拍下第一件展品。",mineTitle:"我的",rowGuide:"讲解",rowLang:"语言",rowAI:"AI 管道",rowVer:"版本",clearBtn:"清空今日足迹",searchTitle:"检索展品",searchPh:"输入名称 / 年代 / 来源……",noHit:k=>"没有匹配「"+k+"」的展品。",citeTitle:"引用与依据",reportTitle:"观展报告",rFoot:"足迹",rStay:"驻足",rSeal:"纪念",savePoster:"保存海报",closeBtn:"关闭",busyReport:"正在生成观展报告",seal1:"骑士生涯探索者",seal2:"钢铁与荣耀见证者",seal3:"追问五连",verVal:"锦语 v1.0 · 2026-11-20",aiOff:"未连接（演示模式）",aiFail:"连接失败",aiNoKey:"已连接 · 未配置 API Key",scanWait:"将展品置于取景框内",scanQR:"对准展品二维码",scanSubCam:"光线不足时，可改拍展品的中英说明牌",scanSubQR:"识别后自动打开该展品的智能讲解",scanSubDemo:"演示模式 · 调研种子数据",scanCamFail:"当前环境不支持相机",scanPick:"点击此处从相册选择二维码照片",scanNoQR:"未识别到二维码",recog:"正在识别",chatHi:n=>"关于「"+n+"」有什么想问的？",lbTap:"点击任意处关闭"},
+ en:{homeKicker:"Chengdu Museum · Smart Guide",displayTitle:"Steel of Glory",displaySub:"Knightly Arms & Armour from the Royal Palace of Turin",metaLine:"2026.04.30 — 08.30 · Special Exhibition, F1",snapBtn:"Snap · Hear the Artefact",scanLink:"Scan QR",searchLink:"Search",today:"Today's Highlights",figCap:"Field photo · first-hand documentation",viewFull:"2026 · 08 · 21 · Full image",viewCite:"Knowledge Base · Citations",askBtn:"Ask a Question",nextBtn:"Next Artefact",mChild:"Kids",mGeneral:"General",mPro:"Expert",chatOn:"On ",chatPh:"Ask about this piece…",sendBtn:"Send →",mapTitle:"Floor Map",mapTipL:"Seven AR points across the hall",mapSlide:"Slide to view →",legendSeen:"Seen",legendUnseen:"Unseen",secFoot:"Footprint",secSeals:"Digital Seals",sealHint:"Three artefacts unlock Knight-Explorer; five unlock Glory-Witness.",reportBtn:"Generate Visit Report",footNone:"No visits yet",footEmpty:"No visits yet. Snap your first artefact in Explore.",mineTitle:"Me",rowGuide:"Narration",rowLang:"Language",rowAI:"AI Pipeline",rowVer:"Version",clearBtn:"Clear Today's Footprint",searchTitle:"Search",searchPh:"Name / era / origin…",noHit:k=>'No match for "'+k+'".',citeTitle:"Citations",reportTitle:"Visit Report",rFoot:"Visits",rStay:"Top Stop",rSeal:"Keepsake",savePoster:"Save Poster",closeBtn:"Close",busyReport:"Generating report",seal1:"Knight-Explorer",seal2:"Glory-Witness",seal3:"Five Questions",verVal:"Jinyu v1.0 · 2026-11-20",aiOff:"Offline (demo mode)",aiFail:"Connection failed",aiNoKey:"Connected · no API key",scanWait:"Place the artefact in the frame",scanQR:"Aim at the QR code",scanSubCam:"In low light, photograph the bilingual label instead",scanSubQR:"Opens the smart guide for this artefact once recognised",scanSubDemo:"Demo mode · seed data",scanCamFail:"Camera unavailable in this context",scanPick:"Tap here to pick a QR photo from your album",scanNoQR:"No QR code recognised",recog:"Recognising",chatHi:n=>"What would you like to know about "+n+"?",lbTap:"Tap anywhere to close"}
 };
 let uiLang="zh";
 /* 追加词条：导航 / 展品页 / 路线 / 报告模板（函数型词条由调用方执行） */
@@ -640,7 +641,8 @@ const CN_NUM=["","一","二","三","四","五","六","七"];
 let audioEl=null;
 
 const $=id=>document.getElementById(id);
-const API=()=>"http://localhost:8000";
+/* 本地开发连本机后端；部署到服务器后与页面同源（nginx 将 /api 反代给后端） */
+const API=()=>/^(localhost|127\.0\.0\.1)$/.test(location.hostname)?"http://localhost:8000":"";
 
 function toast(m){const tEl=$("toast");tEl.textContent=m;tEl.classList.add("on");clearTimeout(tEl._tm);tEl._tm=setTimeout(()=>tEl.classList.remove("on"),2400)}
 const TAB_OF={"pg-home":0,"pg-map":1,"pg-foot":2,"pg-mine":3};
@@ -681,14 +683,9 @@ function closeLightbox(){$("lightbox").classList.remove("on")}
 
 /* ── 演示 / 真实模式 ── */
 async function toggleLive(){
-  /* 线上静态版无后端可连：给出友好说明而非报错 */
-  if(!/^(localhost|127\.0\.0\.1)$/.test(location.hostname)){
-    toast("线上版为演示模式 · AI 识别与追问请使用完整版系统");
-    return;
-  }
   if(!live){
     try{
-      const r=await fetch("http://localhost:8000/api/health");const j=await r.json();
+      const r=await fetch(API()+"/api/health");const j=await r.json();
       live=true;document.body.classList.add("live");
       $("mode-btn").textContent="真实模式";$("mode-btn").classList.add("live");
       $("net-label").textContent=j.api_key_configured?"GLM 已连接":"未配置 API Key";
@@ -735,21 +732,76 @@ async function onPicked(input){
     showRelic(cur,true);
   }
 }
-function closeScan(){$("scan").classList.remove("on")}
+function closeScan(){stopScanner();$("scan").classList.remove("on")}
 
-/* ── 扫码（模拟） ── */
-let scanSeq=0;
+/* ── 扫码（真实）：相机实时解码；HTTP 环境下退化为上传二维码照片解码 ── */
+let scanner=null,qrFileIn=null;
+function ensureQRFileInput(){
+  if(qrFileIn)return qrFileIn;
+  qrFileIn=document.createElement("input");
+  qrFileIn.type="file";qrFileIn.accept="image/*";qrFileIn.style.display="none";
+  qrFileIn.onchange=()=>{const f=qrFileIn.files[0];qrFileIn.value="";if(f)decodeQRFromFile(f)};
+  document.body.appendChild(qrFileIn);
+  return qrFileIn;
+}
+function stopScanner(){
+  if(scanner){try{scanner.stop().then(()=>scanner.clear()).catch(()=>{})}catch(e){}scanner=null}
+  const rd=$("scan-reader");if(rd)rd.style.display="none";
+  const mn=$("scan-mono");if(mn)mn.style.display="inline-flex";
+}
+function pickQRImage(){ensureQRFileInput().click()}
+function useUploadFallback(msg){
+  stopScanner();
+  const frame=document.querySelector("#scan .frame");
+  frame.style.cursor="pointer";frame.onclick=()=>pickQRImage();
+  $("scan-status").innerHTML=t("scanQR")+"<span class='dots'></span>";
+  $("scan-sub").innerHTML=msg+` · <a onclick="pickQRImage()">${t("scanPick")}</a>`;
+}
 function openScan(){
   $("scan-mono").textContent="码";
   $("scan-status").innerHTML=t("scanQR")+"<span class='dots'></span>";
-  $("scan-sub").textContent=t("scanSubQR");
   $("scan").classList.add("on");
-  const target=scanSeq++%RELICS.length;
-  setTimeout(()=>{
-    $("scan").classList.remove("on");
-    showRelic(target,true);
-    toast("二维码已识别："+RELICS[target].name);
-  },1400);
+  const canCam=window.isSecureContext&&navigator.mediaDevices&&navigator.mediaDevices.getUserMedia&&window.Html5Qrcode;
+  if(!canCam){useUploadFallback(t("scanCamFail"));return}
+  $("scan-sub").textContent=t("scanSubQR");
+  $("scan-mono").style.display="none";
+  const rd=$("scan-reader");rd.style.display="block";
+  scanner=new Html5Qrcode("scan-reader",{verbose:false});
+  scanner.start({facingMode:"environment"},{fps:10,qrbox:{width:140,height:140}},
+    txt=>handleQR(txt),
+    ()=>{}).catch(()=>useUploadFallback(t("scanCamFail")));
+}
+async function decodeQRFromFile(file){
+  if(!window.Html5Qrcode){toast(t("scanNoQR"));return}
+  $("scan-status").innerHTML=t("recog")+"<span class='dots'></span>";
+  let tmp=$("jy-qrtmp");
+  if(!tmp){tmp=document.createElement("div");tmp.id="jy-qrtmp";tmp.style.cssText="position:fixed;left:-9999px;top:0;width:2px;height:2px;overflow:hidden";document.body.appendChild(tmp)}
+  try{
+    const s=new Html5Qrcode("jy-qrtmp",{verbose:false});
+    const txt=await s.scanFile(file,false);
+    try{await s.clear()}catch(e){}
+    handleQR(txt);
+  }catch(e){
+    $("scan-status").textContent=t("scanNoQR");
+  }
+}
+async function handleQR(txt){
+  stopScanner();
+  $("scan").classList.remove("on");
+  let rid=null;
+  /* 本地解析（离线可用）：完整 URL / jinyu: 前缀 / 裸 id */
+  const m=(txt||"").match(/[?&]r=([a-z0-9\-]+)/)||(txt||"").match(/^jinyu:([a-z0-9\-]+)/);
+  if(m)rid=m[1];else if(RELICS.find(r=>r.id===txt))rid=txt;
+  /* 在线时交给后端校验并记入扫码日志（调研统计） */
+  if(live){
+    try{
+      const j=await (await fetch(API()+"/api/resolve?code="+encodeURIComponent(txt))).json();
+      if(j.relic_id)rid=j.relic_id;
+    }catch(e){}
+  }
+  const i=RELICS.findIndex(r=>r.id===rid);
+  if(i>=0){showRelic(i,true);toast("二维码已识别："+RELICS[i].name)}
+  else toast(t("scanNoQR"));
 }
 
 /* ── 检索 ── */
@@ -1159,6 +1211,23 @@ function clearFoot(){
   const n=new Date();$("clock").textContent=n.getHours()+":"+String(n.getMinutes()).padStart(2,"0");
   $("mask").addEventListener("click",e=>{if(e.target===$("mask"))closeSheet()});
   applyUi();syncPrefs();renderFoot();
+  /* 深链：扫展品二维码直达（?r=relic_id，任意扫码工具均可打开） */
+  const mDeep=location.search.match(/[?&]r=([a-z0-9\-]+)/);
+  if(mDeep){
+    const di=RELICS.findIndex(r=>r.id===mDeep[1]);
+    if(di>=0){showRelic(di,true);toast("二维码直达 · "+RELICS[di].name)}
+  }
+  /* 后端在线探测：部署版自动进入真实模式 */
+  (async()=>{
+    try{
+      const r=await fetch(API()+"/api/health");if(!r.ok)return;
+      const j=await r.json();if(!j.ok)return;
+      live=true;document.body.classList.add("live");
+      $("mode-btn").textContent="真实模式";$("mode-btn").classList.add("live");
+      $("net-label").textContent=j.api_key_configured?"GLM 已连接":"未配置 API Key";
+      refreshMine();
+    }catch(e){/* 无后端则保持演示模式 */}
+  })();
 })();
 </script>
 </body>
